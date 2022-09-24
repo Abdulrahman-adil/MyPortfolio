@@ -48,6 +48,8 @@ ul {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .clearfix {
@@ -283,6 +285,7 @@ ul {
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 100px;
+  border-bottom: 1px solid #eee;
 }
 
 .about-me .detials {
@@ -320,6 +323,14 @@ ul {
 
 .about-me .detials .info h2 {
   margin: 5px 0 20px 40px;
+}
+
+@media (max-width: 576px) {
+  .about-me .detials .info h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 
 .about-me .detials .info > p {
@@ -366,6 +377,12 @@ ul {
 
 .about-me .detials .info .my-serv .content .text p {
   margin-top: 0;
+}
+
+@media (max-width: 576px) {
+  .about-me .detials .info .my-serv {
+    margin: 0;
+  }
 }
 
 .about-me .fa {
@@ -516,7 +533,7 @@ ul {
 
 @media (max-width: 767px) {
   .our-design .text {
-    width: 100%;
+    width: 80%;
   }
 }
 
