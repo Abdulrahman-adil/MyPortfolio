@@ -1,0 +1,585 @@
+$mainColor : #32A367;
+$mainTransition : all 0.3s ease 0s;
+$padding : 100px;
+$transparentColor: #1c6b8080;
+/*Frame work*/
+.clearfix {
+	clear: both;
+  }
+  .hr1 {
+	width: 99%;
+	border: 0.5px solid #e2e2e2;
+  }
+  ul{
+	list-style: none;
+  }
+  .main-heading{
+	text-align: center;
+  }
+  body{
+	// background-color: #060606;
+  }
+  
+  /*Stat Grid System*/
+  
+  @media (min-width: 576px){ /* Small Devises => lanscape phonse*/
+	.container {
+	   max-width: 540px;
+	}
+  }
+  
+  @media (min-width: 768px){ /* medium Devises => Tablets*/
+	.container {
+	  max-width:720px;
+	}
+  }
+  
+  @media (min-width: 992px){ /* pc Devises*/
+	.container {
+	  max-width:960px;
+	}
+  }
+  
+  @media (min-width: 1200px){ /* larg screens */
+	.container {
+	  max-width:1140px;
+	}
+  }
+  
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+.clearfix {
+	clear: both;
+}
+// keyframes spin {100% {-moz-transform: rotate(360deg);}}
+
+// keyframes spin {100% {-webkit-transform: rotate(360deg);}}
+
+.navbar{
+	background-color: #191E22;
+	@media (max-width: 625px) {
+		background-color: #244a69;
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		h2{
+			color: #fff;
+			span{
+				color: $mainColor;
+			}
+		}
+		.links-containr{
+			// width: 100%;
+			ul{
+				position: relative;
+				list-style: none;
+				padding-left: 0;
+				overflow: hidden;
+				display: flex;
+				li {
+					padding: 10px;
+					a {
+						color: #fff;
+						text-decoration: none;
+						&:hover {
+							color: $mainColor;
+						}
+					}
+
+				}
+				li.active {
+					a {
+						color: $mainColor;
+					}
+				}
+				@media (max-width: 991px) {
+					display: none;
+				}
+				&.open{
+					position: relative;
+					@media (max-width: 991px) {
+						display: block;
+						background-color: #fff;
+						padding: 20;
+						position: absolute;
+						left: 0;
+						top: 42px;
+						border-radius: 20px;
+						width: 100%;
+						transition: $mainTransition;
+
+					}
+				}
+				&.open li a{
+					@media (max-width: 991px) {
+						color: black;
+						font-weight: bold;
+						&:hover {
+							color: $mainColor;
+						}
+					}
+				}
+			}
+			.toggle-menu{
+				position: relative;
+				display: none;
+				border: none;
+				background: none;
+				width: 40px;
+				cursor: pointer;
+				margin-top: 1.5em;
+				span{
+					display: block;
+					background: #fff;
+					height: 3px;
+					margin-bottom: 4px;
+				}
+				@media (max-width: 991px) {
+					display: block;
+				}
+				&.menu-active::after{
+					content: '';
+					border-width: 10px; 
+					position: absolute;
+					border-width: 10px;
+					border-style: solid;
+					bottom: -11px;
+					left: 9px;				
+					border-color: transparent  transparent #fff transparent ;
+				}
+			}
+		}
+
+}
+	}
+
+
+.section {
+	background-image: url('../images/slid%2022.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+		.intro {
+			padding-top: 200px;
+			padding-bottom: 200px;
+			color: #fff;
+			text-align: left;
+			@media (max-width: 576px) {
+			text-align: center;
+			}
+			h2 {
+				margin: 0 auto;
+				font-size: 25px;
+				padding: 5px 0;
+				color: #fff;
+			}
+			h2:nth-child(2) {
+				font-size: 50px;
+				color: $mainColor;
+				@media (max-width: 576px){
+					font-size: 30px;
+
+				}
+			}
+			button {
+				background: $mainColor;
+				padding: 20px;
+				border-radius: 13px;
+				margin-top: 16px;
+				color: #fff;
+				font-size: 23px;
+				font-weight: bold;
+				@media (max-width: 576px){
+					padding: 10px;
+					font-size: 20px;
+				}
+			}
+			.soical{
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				margin-top: 30px;
+				
+				a{
+					color: #fff;
+					transition: $mainTransition;
+					svg{
+						font-size: 30px;
+						&.fa-facebook:hover{
+							background-color: rgb(8, 64, 168);
+							border-radius: 50%;
+						}
+						&.fa-linkedin:hover{
+							background-color: cornflowerblue;
+							
+						}
+						&.fa-github:hover{
+							background-color: cornflowerblue;
+							border-radius: 50%;
+						}
+						&.fa-instagram:hover{
+							background-color: #cd034c;
+							border-radius: 50%;
+						}
+					}
+
+				}
+				@media (max-width: 576px) {
+					justify-content: space-evenly;
+				}
+			}
+		}
+	}
+	
+
+.about-me {
+	// background-color: #F2F2F2;
+	overflow: hidden;
+	padding-top: $padding;
+	padding-bottom: $padding;
+	.detials{
+		display: flex;
+		gap: 20px;
+		.image {
+			transition: all .2s ease-in-out;
+			img {
+				width: 100%;
+				border-radius: 10px 20px 66px 20px;
+				width: 100%;
+				border-radius: 10px 20px 66px 20px;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+			@media (max-width: 991px) {
+				width: 60%;
+			}
+			@media (max-width: 576px) {
+				display: none;
+			}
+		}
+		.info {
+			// width: 60%;
+			h2 {
+				margin: 5px 0 20px 40px;
+			}
+			>p {
+				margin: 0 0 50px 40px;
+				&:last-of-type {
+					
+				}
+			}
+			.my-serv {
+				overflow: hidden;
+				margin: 15px 0 0 40px;
+				display: flex;
+				gap: 12px;
+				p {
+					color: #555;
+				}
+				.content {
+					background-color: #cecece;
+					width: 50%;
+					overflow: hidden;
+					padding: 10px;
+					.inf{
+						display: flex;
+						gap: 11px;
+						align-items: center;
+						.fa-building{
+								color: crimson	
+						}
+						.fa-uikit{
+							color: $mainColor
+						}
+					}
+					.text {
+
+						p {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.fa {
+		color: green;
+	}
+}
+.my-skills {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	overflow: hidden;
+.container{
+	// display: flex;
+    // flex-direction: row;
+    // align-items: center;
+	// gap: 20px;
+		h2{
+		text-align: center;
+		}
+	.progress {
+	// width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+		.technique-box {
+			background-color: #ddd;
+   			 display: flex;
+				align-items: center;
+				    padding: 0px 15px;
+    border-radius: 10px;
+			 .skill-name{
+				margin-left: 20px;
+				font-size: 14px;
+				    width: 100px;
+			 }
+			.skill-progress {
+				height: 20px;
+				width: calc(100% - 100px);
+				background-color: #f6f6f6;
+				position: relative;
+				overflow: hidden;
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 0;
+					height: 100%;
+					background-color: $mainColor;
+				    transition: $mainTransition;
+				}
+			}
+		}
+	}
+}
+}
+// Our Design
+.our-design{
+    background-color: #333;
+    position: relative;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    height: 600px;
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: rgba(0,0,0,0.7);
+        top: 0;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+    }  
+    .img , .text {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+    }
+        .img{
+            margin-left: 20%;
+           img{
+            position: relative;
+            bottom: -120px;
+           }
+           @media (max-width:767px) {
+                display: none;
+        }
+        }
+        .text{
+            position: absolute;
+            transform: translateY(-50%);
+            color: white;
+            right: 0;
+            top: 50%;
+            padding: 50px;
+            background-color: $transparentColor;
+            width: 50%;
+            h2{
+                text-transform: uppercase;
+                font-weight: normal;
+                margin-bottom: 25px;
+            }
+            ul{
+                li{
+                    padding: 10px 0;
+					position: relative;
+                    &::before{
+                        content: '';
+					border-width: 10px; 
+					position: absolute;
+					border-width: 10px;
+					border-style: solid;
+					top: 9px;
+					left: -18px;			
+					border-color: transparent  transparent transparent #fff ;
+                    }
+                }
+            }
+            @media (max-width:767px) {
+                width: 100%;
+            }
+        }
+
+}
+// Our Design
+
+/*Start Portfolio*/
+.portfolio{
+    padding-top: $padding;
+    padding-bottom: $padding;
+    .selectors{
+        display: flex;
+        justify-content: center;
+        li{
+            padding: 10px;
+
+            &.active{
+                background-color: #00c7fc;
+                width: 50px;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+    .awesome-img{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        .box{
+            // flex-basis: 25%;
+            overflow: hidden;
+            position: relative;
+            @media (min-width:768px) {
+               flex-basis: 50%;
+            }
+            @media (min-width:1199px) {
+                flex-basis: 25%;
+             }
+            img{
+                max-width: 100%;
+                transition: 0.3s;
+            }
+            .caption{
+            position: absolute;
+            left: 0;
+            padding: 20px;
+            bottom: -100%;
+			background-color: #fff4f4c4;
+            transition: 0.3s;
+            width: 100%;
+            h4{
+                font-weight: bold;
+                margin-bottom: 10px;
+				color: rgb(3, 0, 0);
+            }
+            p{
+                color: $mainColor;
+            }
+            }
+            &:hover .caption {
+                bottom: 0;
+            }
+            &:hover img {
+                transform: rotate(3deg) scale(1.1);
+            }
+        }
+    }
+    .more{
+        background-color: $mainColor;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: 129px;
+        margin: 30px auto;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+/*End Portfolio*/
+.contact {
+	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 70px;
+	background-image: url(../images/Contact-Us-Image.jpg) ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.form {
+		width: 50%;
+		@media (max-width: 992px) {
+			width: 100%;
+		}
+		label {
+			display: block;
+			// color: #D1D6Da;
+			margin: 10px 0;
+		}
+		input[type="text"],
+		input[type="email"]
+		 {
+			outline: none;
+			border: 0;
+			padding: 10px;
+			width:100%;
+			margin-bottom: 10px;
+		}
+		textarea {
+			outline: none;
+			border: 0;
+			padding: 10px;
+			width:100%;
+			height: 170px;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background: $mainColor;
+			color: #FEFFFF;
+			padding: 10PX 20px;
+			border: 0;
+			margin-top: 16px;
+			border-radius: 10px;
+			@media (max-width: 576px){
+				display: block;
+				margin: 1px auto;
+			}
+		}
+		input {
+			[placeholder] {
+				color: rgb(0, 18, 34);
+			}
+		}
+	}
+}
+.footer {
+	background-color: #191e22;
+	color: #707578;
+	padding: 20px 0;
+	text-align: center;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-right: 10PX 0 0;
+		a {
+			display: inline-block;
+		}
+	}
+}
+
+
